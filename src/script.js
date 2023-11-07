@@ -138,6 +138,7 @@ for (let i = 0; i < 20; i++) {
   grave.position.set(x, 0.4, z);
   grave.rotation.y = (Math.random() - 0.5) * 0.4;
   grave.rotation.z = (Math.random() - 0.5) * 0.4;
+  grave.castShadow = true;
   graves.add(grave);
   const tree = new THREE.Mesh(treeGeometry, treeMaterial);
   tree.position.set(x, 1.5, z);
@@ -228,6 +229,13 @@ birdTwo.castShadow = true;
 birdThree.castShadow = true;
 
 walls.castShadow = true;
+bushOne.castShadow = true;
+bushTwo.castShadow = true;
+bushThree.castShadow = true;
+bushFour.castShadow = true;
+
+floor.receiveShadow = true;
+walls.receiveShadow = true;
 
 const clock = new THREE.Clock();
 
