@@ -237,6 +237,22 @@ bushFour.castShadow = true;
 floor.receiveShadow = true;
 walls.receiveShadow = true;
 
+doorLight.shadow.mapSize.width = 256;
+doorLight.shadow.mapSize.height = 256;
+doorLight.shadow.camera.far = 7;
+
+birdOne.shadow.mapSize.width = 256;
+birdOne.shadow.mapSize.height = 256;
+birdOne.shadow.camera.far = 7;
+
+birdTwo.shadow.mapSize.width = 256;
+birdTwo.shadow.mapSize.height = 256;
+birdTwo.shadow.camera.far = 7;
+
+birdTwo.shadow.mapSize.width = 256;
+birdTwo.shadow.mapSize.height = 256;
+birdTwo.shadow.camera.far = 7;
+
 const clock = new THREE.Clock();
 
 const tick = () => {
