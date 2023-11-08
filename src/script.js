@@ -272,11 +272,12 @@ const tick = () => {
   // birdOne.position.z = Math.sin(birdOneAngle) * 4;
   // birdOne.position.y = Math.sin(elapsedTime * 3);
 
-  const blueLightAngle = Math.sin(elapsedTime * 3);
+  const blueLight1Intensity = (Math.sin(elapsedTime * 3) + 1) / 2;
   // blueLight1.position.x = Math.cos(blueLight1Angle) * 4;
   // birdOne.position.z = Math.sin(birdOneAngle) * 4;
-  blueLight1.intensity = Math.max(0, 0.5 + 0.5 * blueLightAngle);
-  blueLight2.intensity = Math.max(0, 1 + 1 * blueLightAngle);
+  blueLight1.intensity = blueLight1Intensity;
+  const blueLight2Intensity = (Math.cos(elapsedTime * 3) + 1) / 2;
+  blueLight2.intensity = blueLight2Intensity;
   // const birdTwoAngle = -elapsedTime * 0.32;
   // birdTwo.position.x = Math.cos(birdTwoAngle) * 5;
   // birdTwo.position.z = Math.sin(birdTwoAngle) * 5;
