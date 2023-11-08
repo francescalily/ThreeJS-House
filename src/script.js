@@ -173,14 +173,21 @@ gui.add(moonLight.position, "y").min(-5).max(5).step(0.001);
 gui.add(moonLight.position, "z").min(-5).max(5).step(0.001);
 scene.add(moonLight);
 
-const doorLight = new THREE.PointLight("#ff7d46", 3, 7);
+const doorLight = new THREE.PointLight("#ff7d46", 1, 1);
 doorLight.position.set(0, 2.2, 2.7);
 house.add(doorLight);
+
+const blueLight1 = new THREE.PointLight(0x0000ff, 4, 10);
+blueLight1.position.set(-0.5, 1, 2.8);
+
+const blueLight2 = new THREE.PointLight(0x0000ff, 4, 10);
+blueLight2.position.set(0.5, 1, 2.8);
+scene.add(blueLight1, blueLight2);
 
 const birdOne = new THREE.PointLight("#ffffff", 6, 3);
 const birdTwo = new THREE.PointLight("#ffffff", 6, 3);
 const birdThree = new THREE.PointLight("#ff0000", 6, 3);
-// birdThree.position.set(0, 0, 4);
+
 scene.add(birdOne, birdTwo, birdThree);
 
 const sizes = {
