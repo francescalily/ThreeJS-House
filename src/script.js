@@ -267,23 +267,28 @@ const clock = new THREE.Clock();
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
-  const birdOneAngle = elapsedTime * 0.5;
-  birdOne.position.x = Math.cos(birdOneAngle) * 4;
-  birdOne.position.z = Math.sin(birdOneAngle) * 4;
-  birdOne.position.y = Math.sin(elapsedTime * 3);
+  // const birdOneAngle = elapsedTime * 0.5;
+  // birdOne.position.x = Math.cos(birdOneAngle) * 4;
+  // birdOne.position.z = Math.sin(birdOneAngle) * 4;
+  // birdOne.position.y = Math.sin(elapsedTime * 3);
 
-  const birdTwoAngle = -elapsedTime * 0.32;
-  birdTwo.position.x = Math.cos(birdTwoAngle) * 5;
-  birdTwo.position.z = Math.sin(birdTwoAngle) * 5;
-  birdTwo.position.y = Math.sin(elapsedTime * 4) + Math.sin(elapsedTime * 2.5);
+  const blueLightAngle = Math.sin(elapsedTime * 3);
+  // blueLight1.position.x = Math.cos(blueLight1Angle) * 4;
+  // birdOne.position.z = Math.sin(birdOneAngle) * 4;
+  blueLight1.intensity = Math.max(0, 0.5 + 0.5 * blueLightAngle);
+  blueLight2.intensity = Math.max(0, 1 + 1 * blueLightAngle);
+  // const birdTwoAngle = -elapsedTime * 0.32;
+  // birdTwo.position.x = Math.cos(birdTwoAngle) * 5;
+  // birdTwo.position.z = Math.sin(birdTwoAngle) * 5;
+  // birdTwo.position.y = Math.sin(elapsedTime * 4) + Math.sin(elapsedTime * 2.5);
 
-  const birdThreeAngle = -elapsedTime * 0.18;
-  birdThree.position.x =
-    Math.cos(birdThreeAngle) * (7 + Math.sin(elapsedTime * 0.32));
-  birdThree.position.z =
-    Math.sin(birdThreeAngle) * (7 + Math.sin(elapsedTime * 0.5));
-  birdThree.position.y =
-    Math.sin(elapsedTime * 4) + Math.sin(elapsedTime * 2.5);
+  // const birdThreeAngle = -elapsedTime * 0.18;
+  // birdThree.position.x =
+  //   Math.cos(birdThreeAngle) * (7 + Math.sin(elapsedTime * 0.32));
+  // birdThree.position.z =
+  //   Math.sin(birdThreeAngle) * (7 + Math.sin(elapsedTime * 0.5));
+  // birdThree.position.y =
+  //   Math.sin(elapsedTime * 4) + Math.sin(elapsedTime * 2.5);
 
   controls.update();
 
